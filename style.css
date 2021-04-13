@@ -3,4 +3,60 @@
     padding: 0;
   }
   
-  
+html {
+    background-color: darkgreen;
+    color: linen;
+    font-family: 'Roboto Slab', serif;
+    font-size: 16px;
+}
+
+h1 {
+    font-family: 'Montserrat Alternates', sans-serif;
+    font-weight: 900;
+    text-align: center;
+    margin-top: 1rem;
+    text-transform: uppercase;
+    font-size: 3rem;
+}
+
+main {
+    margin-top: 1rem;
+}
+
+div.container {
+    
+    width: 96%;
+    max-width: 960px;
+    margin: 0 auto; /* to center the container */
+    
+  }
+
+img {
+    width: 100%;
+    height: auto;
+  }
+
+.quote {
+    padding: 0.5rem;
+    position: absolute;
+    top: 70%;
+    left: 50%;
+    transform: translate(-50%, -20%);
+    text-align: center;
+    font-size: 2rem;
+    
+}
+
+span {
+    background-color: orange;
+    opacity: 0.9;
+    padding: .1rem 1rem;
+}
+
+button {
+    margin-top: 1rem;
+    padding: 4px;
+    position: absolute;
+    left: 50%;
+
+}
