@@ -36,7 +36,7 @@ img {
     height: auto;
   }
 
-.quote {
+#quote-text {
     padding: 0.5rem;
     position: absolute;
     top: 70%;
@@ -44,6 +44,7 @@ img {
     transform: translate(-50%, -20%);
     text-align: center;
     font-size: 2rem;
+    display: none;
     
 }
 
@@ -53,10 +54,17 @@ span {
     padding: .1rem 1rem;
 }
 
-button {
-    margin-top: 1rem;
-    padding: 4px;
-    position: absolute;
-    left: 50%;
+#quote-button {
+    margin: 1rem auto;
+    padding: 4px;    
+    display: block;
+    font-family: 'Montserrat Alternates', sans-serif;
+    font-weight: 900;
+    font-size: 1.5rem;    
+    background-color: linen;
+    color: darkgreen;
+    width: 100px;
+    height: 50px;
+
 
 }
