@@ -56,6 +56,39 @@ function showQuote() {
 };
 quoteButton.addEventListener('click', showQuote);
 
+
+// Array selector
+let arraySelector = Math.floor(Math.random() *4);
+
+switch (arraySelector) {
+    case 0 : 
+    function quoteSelectorMark() {
+        let randomQuoteMark = Math.floor(Math.random() * markArray.length);
+        return markArray[randomQuoteMark];
+        
+        
+    };
+    case 1 :
+        function quoteSelectorJez() {
+            let randomQuoteJez = Math.floor(Math.random() * jezArray.length);
+            return jezArray[randomQuoteJez];
+        };
+    case 2 :
+        function quoteSelectorHans() {
+            let randomQuoteHans = Math.floor(Math.random() * hansArray.length);
+            return hansArray[randomQuoteHans];
+        };
+    case 3 :
+        function quoteSelectorDobbie() {
+            let randomQuoteDobbie = Math.floor(Math.random() * dobbieArray.length);
+            return dobbieArray[randomQuoteDobbie];
+        };
+}
+
+console.log(arraySelector);
+
+
+
 /*function showQuote() {
   quoteText.style.display = 'block';
 }
