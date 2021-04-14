@@ -5,7 +5,8 @@ const markArray = ["Note to self re: Being the The Fonz. Mark, you are NOT The F
                     "We have something special! We can’t throw all that away just because I spy on you!", 
                     "She is attractive, but brown rice and pop tarts, chamomile tea and economy vodka? That's a car crash of a shopping basket.",
                     "I’m just a normal functioning member of the human race and there’s no way anyone can prove otherwise.",
-                    "I have entered the abyss. I've bought a house in the abyss. I'm getting my post forwarded to the abyss."
+                    "I have entered the abyss. I've bought a house in the abyss. I'm getting my post forwarded to the abyss.",
+                    "How much pain can I experience at home with a spaghetti carbonara and Das Boot?"
                 ];
 
 const jezArray = ["Mark, do you have live so relentlessly in the real world?",
@@ -35,9 +36,18 @@ const dobbieArray = ["Well, it used to be all pink and tidy but then feminism ha
 let quoteButton = document.getElementById('quote-button');
 let quoteText = document.getElementById('quote-text');
 
-// Write your code here:
+
+function quoteSelector() {
+    let randomQuote = Math.floor(Math.random() * markArray.length);
+    return markArray[randomQuote];
+};
 
 function showQuote() {
+    quoteText.innerHTML = quoteSelector();
+};
+quoteButton.addEventListener('click', showQuote);
+
+/*function showQuote() {
   quoteText.style.display = 'block';
 }
-quoteButton.addEventListener('click', showQuote);
+quoteButton.addEventListener('click', showQuote); */
