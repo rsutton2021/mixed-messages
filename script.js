@@ -21,27 +21,22 @@ const hansArray = ['"Nice box of Crunchy Nut you\'ve got there, quite expensive 
                     '"You\'re not just a man anymore - you are a man with a van. You get a van Jez, we could be men with ven."',
                     '"You are paying for that snake to be dry-cleaned."',
                     '"You\'ve been thinking thoughts your whole life. Look where that got you."',
-                    '"...is the bottom half of me on fire?"',
+                    '"...is the bottom half of me on fire?."',
                     '"We speak the language of love. And a little bit of German."'
                 ];
 
-const dobbieArray = ['"Well, it used to be all pink and tidy but then feminism happened and we all just started pissing on the floor"',
-                    '"I\'m a smoker, I need man-cheddar"',
+const dobbieArray = ['"Well, it used to be all pink and tidy but then feminism happened and we all just started pissing on the floor."',
+                    '"I\'m a smoker, I need man-cheddar."',
                     '"I love that whole \'Screw you all, I\'m a cat\' vibe."',
                     '"Mark, you\'re not trying to get away with pretending you\'re a normal human being are you?"'];
 
-const johnsonArray = ['"Stick <em>that</em> up your dojo"',
-                        '"I\'ve got a 32-inch plasma in my office. You get a document up on that baby and you are seriously looking at that document"',
-                        '"Stick it on the later base"',
-                        '"I\'m going to be Charles and you\'ll be my... Camilla"'
+const johnsonArray = ['"Stick <em>that</em> up your dojo."',
+                        '"I\'ve got a 32-inch plasma in my office. You get a document up on that baby and you are seriously looking at that document."',
+                        '"Stick it on the later base."',
+                        '"I\'m going to be Charles and you\'ll be my... Camilla."'
                     ];
 
 let quoteCache;
-
-/*function quoteSelectorMark() {
-    let randomQuoteMark = Math.floor(Math.random() * markArray.length);
-    return markArray[randomQuoteMark];     
-    }; */
 
 function quoteSelectorMark() {
     quoteCache = Math.floor(Math.random() * markArray.length);
