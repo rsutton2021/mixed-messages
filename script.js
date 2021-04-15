@@ -30,7 +30,45 @@ const dobbieArray = ['"Well, it used to be all pink and tidy but then feminism h
                     '"I love that whole \'Screw you all, I\'m a cat\' vibe."',
                     '"Mark, you\'re not trying to get away with pretending you\'re a normal human being are you?"'];
 
+const johnsonArray = ['"Stick <em>that</em> up your dojo"',
+                        '"I\'ve got a 32-inch plasma in my office. You get a document up on that baby and you are seriously looking at that document"',
+                        '"Stick it on the later base"',
+                        '"I\'m going to be Charles and you\'ll be my... Camilla"'
+                    ];
 
+let quoteCache;
+
+/*function quoteSelectorMark() {
+    let randomQuoteMark = Math.floor(Math.random() * markArray.length);
+    return markArray[randomQuoteMark];     
+    }; */
+
+function quoteSelectorMark() {
+    quoteCache = Math.floor(Math.random() * markArray.length);
+    return markArray[quoteCache];
+    };
+                    
+function quoteSelectorJez() {
+    quoteCache = Math.floor(Math.random() * jezArray.length);
+    return jezArray[quoteCache];    
+    };
+                    
+function quoteSelectorHans() {
+    quoteCache = Math.floor(Math.random() * hansArray.length);
+    return hansArray[quoteCache];    
+    };
+                    
+function quoteSelectorDobbie() {
+    quoteCache = Math.floor(Math.random() * dobbieArray.length);
+    return dobbieArray[quoteCache];    
+    };
+
+function quoteSelectorJohnson() {
+        quoteCache = Math.floor(Math.random() * johnsonArray.length);
+        return johnsonArray[quoteCache];    
+        };
+                    
+                    
 
 
 let quoteButton = document.getElementById('quote-button');
@@ -39,13 +77,15 @@ let markPic = document.getElementById('mark-pic');
 let jezPic = document.getElementById('jez-pic');
 let hansPic = document.getElementById('hans-pic');
 let dobbiePic = document.getElementById('dobbie-pic');
+let johnsonPic = document.getElementById('johnson-pic')
 let markJezPic = document.getElementById('mark-jez-pic');
+
 
 
 // Mark quote function
 function quoteSelector() {
     let randomQuote = Math.floor(Math.random() * markArray.length);
-    return markArray[randomQuote];
+    return markArray[randomQuote]; 
     
 };
 
@@ -56,27 +96,42 @@ function quoteSelector() {
 }; */
 
 function showQuote() {
-    quoteText.innerHTML = arraySelector; 
+    //quoteText.innerHTML = arraySelector; 
+    
+    quoteText.innerHTML = quoteCache;
+    
+
     if (display === 'mark') {
         markPic.style.display = 'block';
         jezPic.style.display = 'none';
         hansPic.style.display = 'none';
         dobbiePic.style.display = 'none';
+        johnsonPic.style.display = 'none';
         markJezPic.style.display = 'none';
     } else if (display === 'jez') {
         jezPic.style.display = 'block';
         markPic.style.display = 'none';
         hansPic.style.display = 'none';
         dobbiePic.style.display = 'none';
+        johnsonPic.style.display = 'none';
         markJezPic.style.display = 'none';
     } else if (display === 'hans') {
         hansPic.style.display = 'block';
         markPic.style.display = 'none';
         jezPic.style.display = 'none';
         dobbiePic.style.display = 'none';
+        johnsonPic.style.display = 'none';
         markJezPic.style.display = 'none';
     } else if (display === 'dobbie') {
         dobbiePic.style.display = 'block';
+        markPic.style.display = 'none';
+        jezPic.style.display = 'none';
+        hansPic.style.display = 'none';
+        johnsonPic.style.display = 'none';
+        markJezPic.style.display = 'none';
+    } else if (display === 'johnson') {
+        johnsonPic.style.display = 'block';
+        dobbiePic.style.display = 'none';
         markPic.style.display = 'none';
         jezPic.style.display = 'none';
         hansPic.style.display = 'none';
@@ -84,13 +139,18 @@ function showQuote() {
     }
 };
 
+/*function reload() {
+    location.reload();
+} */
+
+//quoteButton.addEventListener('mousedown', reload);
 quoteButton.addEventListener('click', showQuote);
 
 
 // Array selector
-let arraySelector = Math.floor(Math.random() *4);
+let arraySelector = Math.floor(Math.random() *5);
 let display;
-let quoteCache;
+
 
 switch (arraySelector) {
     case 0 :
@@ -112,28 +172,13 @@ switch (arraySelector) {
         quoteCache = quoteSelectorDobbie();
         display = 'dobbie';
         break;
+    
+    case 4 :
+        quoteCache = quoteSelectorJohnson();
+        display = 'johnson';
+        break;
         
 };
 
-
-function quoteSelectorMark() {
-    let randomQuoteMark = Math.floor(Math.random() * markArray.length);
-    return markArray[randomQuoteMark];     
-};
-
-function quoteSelectorJez() {
-    let randomQuoteJez = Math.floor(Math.random() * jezArray.length);
-    return jezArray[randomQuoteJez];
-};
-
-function quoteSelectorHans() {
-    let randomQuoteHans = Math.floor(Math.random() * hansArray.length);
-    return hansArray[randomQuoteHans];
-};
-
-function quoteSelectorDobbie() {
-    let randomQuoteDobbie = Math.floor(Math.random() * dobbieArray.length);
-    return dobbieArray[randomQuoteDobbie];
-};
 
 

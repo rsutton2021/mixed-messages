@@ -44,7 +44,7 @@ img {
     left: 50%;
     transform: translate(-50%, -20%);
     text-align: center;
-    font-size: 2rem;
+    font-size: 1.8rem;
     text-shadow: 1px 1px 10px black;
     
     
@@ -90,5 +90,9 @@ span {
 }
 
 #dobbie-pic {
+    display: none;
+}
+
+#johnson-pic {
     display: none;
 }
