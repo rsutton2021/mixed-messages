@@ -61,35 +61,42 @@ quoteButton.addEventListener('click', showQuote);
 let arraySelector = Math.floor(Math.random() *4);
 
 switch (arraySelector) {
-    case 0 : 
-    function quoteSelectorMark() {
-        let randomQuoteMark = Math.floor(Math.random() * markArray.length);
-        return markArray[randomQuoteMark];
-        
-        
-    };
+    case 0 :
+        quoteSelectorMark();
+        break; 
+    
     case 1 :
-        function quoteSelectorJez() {
-            let randomQuoteJez = Math.floor(Math.random() * jezArray.length);
-            return jezArray[randomQuoteJez];
-        };
+        quoteSelectorJez();
+        break;
+        
     case 2 :
-        function quoteSelectorHans() {
-            let randomQuoteHans = Math.floor(Math.random() * hansArray.length);
-            return hansArray[randomQuoteHans];
-        };
+        quoteSelectorHans();
+        break;
+        
     case 3 :
-        function quoteSelectorDobbie() {
-            let randomQuoteDobbie = Math.floor(Math.random() * dobbieArray.length);
-            return dobbieArray[randomQuoteDobbie];
-        };
+        quoteSelectorDobbie();
+        break;
+        
 }
 
-console.log(arraySelector);
+function quoteSelectorMark() {
+    let randomQuoteMark = Math.floor(Math.random() * markArray.length);
+    return markArray[randomQuoteMark];     
+};
+
+function quoteSelectorJez() {
+    let randomQuoteJez = Math.floor(Math.random() * jezArray.length);
+    return jezArray[randomQuoteJez];
+};
+
+function quoteSelectorHans() {
+    let randomQuoteHans = Math.floor(Math.random() * hansArray.length);
+    return hansArray[randomQuoteHans];
+};
+
+function quoteSelectorDobbie() {
+    let randomQuoteDobbie = Math.floor(Math.random() * dobbieArray.length);
+    return dobbieArray[randomQuoteDobbie];
+};
 
 
-
-/*function showQuote() {
-  quoteText.style.display = 'block';
-}
-quoteButton.addEventListener('click', showQuote); */
