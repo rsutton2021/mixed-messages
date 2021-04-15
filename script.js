@@ -28,7 +28,7 @@ const hansArray = ['"Nice box of Crunchy Nut you\'ve got there, quite expensive 
 const dobbieArray = ['"Well, it used to be all pink and tidy but then feminism happened and we all just started pissing on the floor"',
                     '"I\'m a smoker, I need man-cheddar"',
                     '"I love that whole \'Screw you all, I\'m a cat\' vibe."',
-                    '"Mark, you\'re not trying to get away with pretending you\'re a normal human being are you?"']
+                    '"Mark, you\'re not trying to get away with pretending you\'re a normal human being are you?"'];
 
 
 
@@ -39,45 +39,82 @@ let markPic = document.getElementById('mark-pic');
 let jezPic = document.getElementById('jez-pic');
 let hansPic = document.getElementById('hans-pic');
 let dobbiePic = document.getElementById('dobbie-pic');
-let markJezPic = document.getElementById('mark-jez-pic')
+let markJezPic = document.getElementById('mark-jez-pic');
 
 
 // Mark quote function
 function quoteSelector() {
     let randomQuote = Math.floor(Math.random() * markArray.length);
     return markArray[randomQuote];
+    
 };
 
-function showQuote() {
-    quoteText.innerHTML = quoteSelector();
+/* function showQuote() {
+    quoteText.innerHTML = quoteSelector(); 
     markPic.style.display = 'block';
     markJezPic.style.display = 'none';
+}; */
 
+function showQuote() {
+    quoteText.innerHTML = arraySelector; 
+    if (display === 'mark') {
+        markPic.style.display = 'block';
+        jezPic.style.display = 'none';
+        hansPic.style.display = 'none';
+        dobbiePic.style.display = 'none';
+        markJezPic.style.display = 'none';
+    } else if (display === 'jez') {
+        jezPic.style.display = 'block';
+        markPic.style.display = 'none';
+        hansPic.style.display = 'none';
+        dobbiePic.style.display = 'none';
+        markJezPic.style.display = 'none';
+    } else if (display === 'hans') {
+        hansPic.style.display = 'block';
+        markPic.style.display = 'none';
+        jezPic.style.display = 'none';
+        dobbiePic.style.display = 'none';
+        markJezPic.style.display = 'none';
+    } else if (display === 'dobbie') {
+        dobbiePic.style.display = 'block';
+        markPic.style.display = 'none';
+        jezPic.style.display = 'none';
+        hansPic.style.display = 'none';
+        markJezPic.style.display = 'none';
+    }
 };
+
 quoteButton.addEventListener('click', showQuote);
 
 
 // Array selector
 let arraySelector = Math.floor(Math.random() *4);
+let display;
+let quoteCache;
 
 switch (arraySelector) {
     case 0 :
-        quoteSelectorMark();
+        quoteCache = quoteSelectorMark();
+        display = 'mark';
         break; 
     
     case 1 :
-        quoteSelectorJez();
+        quoteCache = quoteSelectorJez();
+        display = 'jez';        
         break;
         
     case 2 :
-        quoteSelectorHans();
+        quoteCache = quoteSelectorHans();
+        display = 'hans';
         break;
         
     case 3 :
-        quoteSelectorDobbie();
+        quoteCache = quoteSelectorDobbie();
+        display = 'dobbie';
         break;
         
-}
+};
+
 
 function quoteSelectorMark() {
     let randomQuoteMark = Math.floor(Math.random() * markArray.length);
