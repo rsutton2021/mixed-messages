@@ -82,22 +82,7 @@ let markJezPic = document.getElementById('mark-jez-pic');
 
 
 
-// Mark quote function
-function quoteSelector() {
-    let randomQuote = Math.floor(Math.random() * markArray.length);
-    return markArray[randomQuote]; 
-    
-};
-
-/* function showQuote() {
-    quoteText.innerHTML = quoteSelector(); 
-    markPic.style.display = 'block';
-    markJezPic.style.display = 'none';
-}; */
-
-function showQuote() {
-    //quoteText.innerHTML = arraySelector; 
-    
+function showQuote() {      
     quoteText.innerHTML = quoteCache;
     
 
