@@ -6,14 +6,16 @@ const markArray = ['"Note to self re: Being the The Fonz. Mark, you are NOT The 
                     '"She is attractive, but brown rice and pop tarts, chamomile tea and economy vodka? That\'s a car crash of a shopping basket."',
                     '"I’m just a normal functioning member of the human race and there’s no way anyone can prove otherwise."',
                     '"I have entered the abyss. I\'ve bought a house in the abyss. I\'m getting my post forwarded to the abyss."',
-                    '"How much pain can I experience at home with a spaghetti carbonara and Das Boot?"'
+                    '"How much pain can I experience at home with a spaghetti carbonara and Das Boot?"',
+                    '"Plays, wine, Lesbos... I\'ve arrived! Just don\'t mention Bravo Two Zero."'
                 ];
 
 const jezArray = ['"Mark, do you have live so relentlessly in the real world?"',
                     '"You realise that tinned food is just for crackheads and wars?"',
                     '"Mark, if I can just get rid of the dog corpse, there\'s a chance I still might get laid here."',
                     '"Not to be too la-di-dah, but is there a room with fewer snakes available?"',
-                    '"I don\'t want to tempt fate but I think everything is going to be totally great forever."'
+                    '"I don\'t want to tempt fate but I think everything is going to be totally great forever."',
+                    '"I\m a friend of Mark\'s and I\'ve just had my dreams punctured by the most punctual electro-dub outfit in Britain."' 
                 ];
 
 const hansArray = ['"Nice box of Crunchy Nut you\'ve got there, quite expensive I seem to recall..."',
